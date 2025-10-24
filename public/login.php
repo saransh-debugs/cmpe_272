@@ -39,7 +39,7 @@ include __DIR__ . '/includes/header.php';
 				<?php if ($error): ?>
 					<div class="alert error"><?php echo htmlspecialchars($error); ?></div>
 				<?php endif; ?>
-				<form method="post" action="/login.php" class="form">
+				<form method="post" action="./login.php" class="form">
 					<input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(get_csrf_token()); ?>">
 					<input type="hidden" name="redirect" value="<?php echo htmlspecialchars($redirect); ?>">
 					<div class="form-row">

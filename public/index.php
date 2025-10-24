@@ -7,8 +7,9 @@
 				<h1>Tailor made trips to the world's most inspiring places</h1>
 				<p>BayArea Travels crafts personalized itineraries, exclusive experiences, and stress‑free planning so you can focus on making memories.</p>
 				<div class="cta">
-					<a class="button" href="/products.php">Explore Services</a>
-					<a class="button secondary" href="/contacts.php">Get in Touch</a>
+					<a class="button" href="<?php echo url('products.php'); ?>">Explore Services</a>
+					<a class="button secondary" href="<?php echo url('products.php#recently-viewed'); ?>">Recently Viewed</a>
+					<a class="button secondary" href="<?php echo url('contacts.php'); ?>">Get in Touch</a>
 				</div>
 			</div>
 		</div>
