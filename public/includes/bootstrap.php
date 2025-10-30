@@ -6,22 +6,33 @@ function app_scheme(): string {
 }
 
 function app_base_path(): string {
-  $dir = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
-  return $dir === '/' ? '' : $dir;
+  $script = $_SERVER['SCRIPT_NAME'] ?? '';
+  if ($script === '') {
+    return '';
+  }
+  $dir = rtrim(dirname($script), '/\\');
+  if ($dir === '/' || $dir === '\\') {
+    return '';
+  }
+  // If running from a subdirectory that includes "/public", trim to that base, e.g. /cmpe_272/public
+  $pos = strpos($dir, '/public/');
+  if ($pos !== false) {
+    return substr($dir, 0, $pos + strlen('/public'));
+  }
+  if (substr($dir, -7) === '/public') {
+    return $dir;
+  }
+  // Default: assume domain root
+  return '';
 }
 
 function app_base_url(): string {
-  $scheme = app_scheme();
-  $host = $_SERVER['HTTP_HOST'];
-  $path = app_base_path();
-  $url = $scheme . '://' . $host . $path;
-  error_log("Base URL components: scheme=$scheme, host=$host, path=$path");
-  error_log("Full base URL: $url");
-  return $url;
+  return app_scheme() . '://' . $_SERVER['HTTP_HOST'];
 }
 
 function url(string $path = ''): string {
-  return rtrim(app_base_url(), '/') . '/' . ltrim($path, '/');
+  $base = rtrim(app_base_url(), '/') . app_base_path();
+  return rtrim($base, '/') . '/' . ltrim($path, '/');
 }
 
 function asset(string $path = ''): string {

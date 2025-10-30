@@ -9,7 +9,7 @@ $current = current_file();
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title><?php echo isset($pageTitle) ? $pageTitle . ' — ' : ''; ?>BayArea Travels</title>
-	<link rel="stylesheet" href="<?php echo asset('/assets/css/styles.css'); ?>" />
+	<link rel="stylesheet" href="<?php echo asset('assets/css/styles.css'); ?>" />
 </head>
 <body>
 	<header class="site-header">
