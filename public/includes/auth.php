@@ -23,7 +23,7 @@ function is_admin_logged_in(): bool {
 function require_admin(): void {
 	if (!is_admin_logged_in()) {
 		$requested = $_SERVER['REQUEST_URI'] ?? '/secure/users.php';
-		header('Location: ./login.php?redirect=' . urlencode($requested));
+    header('Location: /login.php?redirect=' . urlencode($requested));
 		exit;
 	}
 }

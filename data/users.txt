@@ -1,11 +1,11 @@
-Tyrion Lannister
-Cersei Lannister
-Jaime Lannister
-Arya Stark
-Jon Snow
-Joffrey Baratheon
-Ned Stark
-Sansa Stark
-Daenerys Targaryen
-Brienne of Tarth
-Robb Stark
+1, Tyrion Lannister, tyrion.lannister@asoiaf.com
+2, Cersei Lannister, cersei.lannister@asoiaf.com
+3, Jaime Lannister, jaime.lannister@asoiaf.com
+4, Arya Stark, arya.stark@asoiaf.com
+5, Jon Snow, jon.snow@asoiaf.com
+6, Joffrey Baratheon, joffrey.baratheon@asoiaf.com
+7, Ned Stark, ned.stark@asoiaf.com
+8, Sansa Stark, sansa.stark@asoiaf.com
+9, Daenerys Targaryen, daenerys.targaryen@asoiaf.com
+10, Brienne of Tarth, brienne.tarth@asoiaf.com
+11, Robb Stark, robb.stark@asoiaf.com
